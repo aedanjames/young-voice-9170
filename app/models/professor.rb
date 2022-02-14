@@ -6,7 +6,7 @@ validates :name, presence: true
 validates :age, presence: true 
 validates :specialty, presence: true 
 
-    def self.alphebetical_professors
+    def self.alphabetical_professors
         order(name: :asc)
     end 
 end
