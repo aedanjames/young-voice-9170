@@ -11,6 +11,12 @@ RSpec.describe 'The students index' do
         ProfessorStudent.create(student_id: longbottom.id, professor_id: @snape.id)
     end 
 
+    it 'lists the name of each student' do 
+        visit "/professors/#{@snape.id}"
+        expect(page).to have_content("Harry Potter")
+        expect(page).to have_content("Neville Longbottom")
+    end 
+
     it 'lists the number of professors each student has' do 
         visit "/professors/#{@snape.id}"
         expect(page).to have_content(2)
