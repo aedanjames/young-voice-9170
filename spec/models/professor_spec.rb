@@ -18,10 +18,10 @@ RSpec.describe Professor, type: :model do
   end 
 
   describe 'class methods' do
-    describe '.alphebetical_professors' do 
+    describe '.alphabetical_professors' do 
       it 'returns all professors alphabetically' do 
         expect(Professor.all).to eq([@snape, @hagarid])
-        expect(Professor.alphebetical_professors).to eq([@hagarid, @snape])
+        expect(Professor.alphabetical_professors).to eq([@hagarid, @snape])
       end
     end 
   end
