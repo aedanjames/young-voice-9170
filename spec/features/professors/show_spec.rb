@@ -17,8 +17,9 @@ RSpec.describe 'The professors show' do
         expect(page).to have_content("Neville Longbottom")
     end 
 
-    xit 'lists the number of professors each student has' do 
+    it 'lists the number of professors each student has' do 
         visit "/professors/#{@snape.id}"
-        expect(page).to have_content()
+        expect(page).to have_content(2)
+        expect(page).to have_content(1)
     end 
 end 
