@@ -11,4 +11,18 @@ RSpec.describe Professor, type: :model do
     it {should have_many :professor_students}
     it {should have_many(:students).through(:professor_students)}
   end
+
+  before :each do 
+    @snape = Professor.create(name: "Severus Snape", age: 45, specialty: "Potions")
+    @hagarid = Professor.create(name: "Rubeus Hagrid", age: 38 , specialty: "Care of Magical Creatures")
+  end 
+
+  describe 'class methods' do
+    describe '.alphabetical_professors' do 
+      it 'returns all professors alphabetically' do 
+        expect(Professor.all).to eq([@snape, @hagarid])
+        expect(Professor.alphabetical_professors).to eq([@hagarid, @snape])
+      end
+    end 
+  end
 end
