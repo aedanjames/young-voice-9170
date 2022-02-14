@@ -8,7 +8,7 @@ RSpec.describe 'The professors show' do
         longbottom = Student.create(name: "Neville Longbottom" , age: 11 , house: "Gryffindor" )
         ProfessorStudent.create(student_id: harry.id, professor_id: @snape.id)
         ProfessorStudent.create(student_id: harry.id, professor_id: @hagarid.id)
-        ProfessorStudent.create(student_id: longbottom.id, professor_id: snape.id)
+        ProfessorStudent.create(student_id: longbottom.id, professor_id: @snape.id)
     end 
 
     it 'lists names of students that professors have' do 
@@ -17,7 +17,7 @@ RSpec.describe 'The professors show' do
         expect(page).to have_content("Neville Longbottom")
     end 
 
-    it 'lists the number of professors each student has' do 
+    xit 'lists the number of professors each student has' do 
         visit "/professors/#{@snape.id}"
         expect(page).to have_content()
     end 
