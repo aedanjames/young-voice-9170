@@ -1,59 +1,6 @@
-# Hogwarts Again
-
-## Setup instructions:
-  - Fork this repo
-  - `git clone <repo>`
-  - `cd <repo_name>`
-  - `bundle install`
-  - `rails db:{create,migrate,seed}`
-
-When you run rspec, you should have 12 failing tests to start.  
-
-###  Overview
-
-We will be creating an application to track Professors and Students at the Hogwarts School of Witchcraft and Wizardry from the Harry Potter book series (you do not need any knowledge of Harry Potter to complete this challenge). 
-
- 
-### User Stories
- 
-```
-User Story 1 of 4
-As a visitor,
-When I visit '/professors',
-I see a list of professors with the following information:
--Name
--Age
--Specialty
-(e.g. "Name: Minerva McGonagall, Age: 204, Specialty: Transfiguration")
-```
-```
-User Story 2 of 4
-As a visitor,
-When I visit '/professors/:id'
-I see a list of the names of the students the professors have.
-(e.g. "Neville Longbottom"
-     "Hermione Granger"
-     "Luna Lovegood")
-```
-```
-User Story 3 of 4
-As a visitor,
-When I visit '/students'
-I see a list of students and the number of professors each student has.
-(e.g. "Draco Malfoy: 5"
-     "Nymphadora Tonks: 10")
-```
-```
-User Story 4 of 4
-As a visitor,
-When I visit '/professors/:id'
-I see the average age of all students for that professor.
-(e.g. "Average Age: 14.5")
-```
----
-### Extension
-```
-User Story Extension
-On all index pages, all information is listed alphabetically.
-	
-
+## Reflections
+- This was super fun, I enjoyed the challenge overall. I will say that I went too fast at the beginning and should have read the user stories a little more closely. Instead of paying enough attention to each one I skimmed forward thinking about how to solve the problem. This resulted in my having to backtrack and put info that should have been on the students index page in a place it didnt' belong. Not a huge deal but for the sake of efficiency I would do well to slow down during timed challenges. 
+- I feel pretty good about my methods and work overall, although I couldn't complete the tests for the extension. 
+	- It makes sense to use an each_with_index and in the test check if each expected item is included in the section with that index, I just couldn't work out how to call that information in the spec. 
+- I definitely want to look into/practice structuring my specs using within blocks. I would also love to see how I could have used the each_with_index. Because although the orderly gem is useful i'd rather not rely on gems just in case. I've struggled with finding good literature for comparison online. 
+- Thank you for your time and feedback! I appreciate it very much. 
