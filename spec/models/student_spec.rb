@@ -24,7 +24,7 @@ RSpec.describe Student, type: :model do
   end
  
   describe 'instance methods' do 
-    describe '.professor_count' do 
+    describe '#professor_count' do 
       it 'counts the number of professors a student has' do 
         expect(@harry.professor_count).to eq(2)
         expect(@longbottom.professor_count).to eq(1)
@@ -34,13 +34,13 @@ RSpec.describe Student, type: :model do
   end 
 
   describe 'class methods' do 
-    describe '#average_age' do 
+    describe '.average_age' do 
       it 'returns the average age of all students' do 
         expect(Student.average_age).to eq(12)
       end 
     end 
 
-    describe '#alphabetical_students' do 
+    describe '.alphabetical_students' do 
       it 'orders students being returned alphabetically' do 
         expect(Student.all).to eq([@longbottom, @harry])
         expect(Student.alphabetical_students).to eq([@harry, @longbottom])
