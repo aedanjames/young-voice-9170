@@ -19,6 +19,7 @@ RSpec.describe 'The professors show' do
 
     it 'lists the average age of all students for that professor' do 
         visit "/professors/#{@snape.id}"
+        save_and_open_page
         expect(page).to have_content(12)
     end 
 end 
